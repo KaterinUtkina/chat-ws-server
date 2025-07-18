@@ -82,7 +82,7 @@ wss.on('connection', (ws) => {
   });
 
   ws.on('close', () => {
-    clients.delete(ws);
+    clients.delete(clientId);
     console.log('Client disconnected');
 
     broadcastClientCount();
