@@ -74,7 +74,7 @@ wss.on('connection', (ws) => {
         author: clientId,
         timestamp: Date.now(),
         type: message.type,
-      });
+      }, clientId);
 
     } catch (error) {
       console.error('Error processing message:', error.message);
